@@ -1,14 +1,18 @@
 package service;
 
 import domain.Member;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import repository.MemberRepository;
 import repository.MemoryMemberRepository;
 
 import java.util.*;
 
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
