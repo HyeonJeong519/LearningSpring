@@ -32,3 +32,21 @@
 ### MVC Pattern 사용 이유?
 
 유지보수의 편리성
+
+
+###Service Test
+Assertions.assertThat()
+이점 1. 가독성
+이점 2. Failure 메시지 
+- expected 값과 actual 값이 에러 메시지에 반환
+이점 3. type 안정성
+- assertEquals는 type이 달라도 컴파일은 가능하지만 실행 시 실패한다.
+- but, assertThat은 type이 다를 시 컴파일 실패
+
+###Annotation
+@Component  애노테이션이 있으면 스프링 빈으로 자동 등록된다.
+
+@Controller 컨트롤러가 스프링 빈으로 자동 등록된 이유도 컴포넌트 스캔 때문이다.
+
+@Component 를 포함하는 다음 애노테이션도 스프링 빈으로 자동 등록된다.
+@Controller, @Service,  @Repository
